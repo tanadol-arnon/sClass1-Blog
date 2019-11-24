@@ -7,3 +7,12 @@ function initMap() {
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: uluru, map: map});
   }
+
+  $(window).scroll(function(){
+      var scrollTop = $(this).scrollTop();
+      if(scrollTop > 1){
+        $('nav').css('padding','5px 25px')
+      }else{
+          $('#navbar').css('padding', '25px')
+      }
+  })

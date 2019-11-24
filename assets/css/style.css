@@ -4,6 +4,7 @@
     2. Section Carousel
     3. Section Blog
     4. Section Footer
+    5. Section Navbar
 */
 
 /* 
@@ -111,4 +112,10 @@ html, body {
 #map {
     height: 300px;  /* The height is 400 pixels */
     width: 100%;  /* The width is the width of the web page */
+}
+
+/* Section Navbar */
+#navbar{
+    padding: 25px;
+    transition: 0.5s;
 }
