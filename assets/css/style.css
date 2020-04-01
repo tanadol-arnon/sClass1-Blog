@@ -5,6 +5,9 @@
     3. Section Blog
     4. Section Footer
     5. Section Navbar
+    6. Section Page-Title
+    7. Section Timeline
+    8. Section Star
 */
 
 /* 
@@ -21,17 +24,14 @@ html, body {
     height: 100%;
     font-family: 'Prompt', sans-serif;
 }
-
 .bg-alpha {
     background: rgba(0, 0, 0, 0.5);
 }
-
 .border-short-bottom {
     position: relative;
     padding: 20px 0;
     margin-bottom: 25px;
 }
-
 .border-short-bottom::after {
     position: absolute;
     content: "";
@@ -42,7 +42,6 @@ html, body {
     left: 50%;
     margin-left: -50px;
 }
-
 @media (max-width: 768px){
     .display-4 {
         font-size: 2.5rem;
@@ -56,18 +55,15 @@ html, body {
 .carousel-inner .active {
     height: 100%;
 }
-
 .carousel-img {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
 }
-
 .carousel-caption {
     top: 40%;
 }
-
 .blackscreen {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -79,13 +75,11 @@ html, body {
     padding-top: 56.25%;
     overflow: hidden;
 }
-
 .warpper-card-img img {
     position: absolute;
     top: 0;
     transition: 1s;
 }
-
 .warpper-card-img img:hover {
     transform: scale(1.2);
 }
@@ -95,17 +89,14 @@ html, body {
     background: #2b2b2b;
     color: #dcdcdc;
 }
-
 .semi-footer a {
     color: #dcdcdc;
 }
-
 .semi-footer h4 {
     color: #75c6fc;
     border-bottom: 1px solid;
     padding: 10px 0;
 }
-
 .footer {
     background: #000000;
     color: #ffffff;
@@ -114,7 +105,6 @@ html, body {
     line-height: 90px;
     text-align: center;
 }
-
 #map {
     height: 300px;  /* The height is 400 pixels */
     width: 100%;  /* The width is the width of the web page */
@@ -124,4 +114,135 @@ html, body {
 #navbar{
     padding: 25px;
     transition: 0.5s;
+}
+
+/* Section Page-Title */
+.page-title{
+    position: relative;
+    display: block;
+    padding-top: 250px;
+    padding-bottom: 100px;
+    color: #ffffff;
+}
+
+/* Section Timeline */
+.timeline{
+    list-style: none;
+    position: relative;
+    padding: 20px 0;
+}
+.timeline > li{
+    position: relative;
+    margin-bottom: 40px;
+}
+.timeline::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #e6e6e6;
+    top:0;
+    left: 50%;
+    bottom: 0;
+    margin-left: -1px;
+}
+li > .timeline-badge{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #84ba3f;
+    left: 50%;
+    margin-left: -9px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 0 5px #ffffff;
+    top: 15px;
+}
+li > .timeline-badge::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 25px;
+    height: 2px;
+    background: #e6e6e6;
+}
+li.inverted > .timeline-badge::before{
+    right: -32px;
+
+}
+li > .timeline-badge p{
+    width: 200px;
+    margin-top: -7px;
+    margin-left: 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+li.inverted > .timeline-badge p{
+    float: right;
+    text-align: right;
+    margin-right: 35px;
+}
+li > .timeline-card{
+    width: 46%;
+    float: left;
+    text-align: right;
+    padding: 0 10px;
+    position: relative;
+}
+li.inverted > .timeline-card{
+    float: right;
+    text-align: left;
+    
+}
+.timeline > li::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.timeline-arrow{
+    width: 100%;
+    text-align: center;
+    bottom: -70px;
+    color: #e6e6e6;
+}
+
+
+@media (max-width: 768px){
+    .timeline::before,
+    .timeline-badge{
+        left: 40px !important;
+    }
+    .timeline-badge::before{
+        right: -32px !important;
+    }
+    .timeline-badge p,
+    li.inverted > .timeline-badge p{
+        margin-left: 50px !important;
+        text-align: left;
+        float: left;
+    }
+    li > .timeline-card{
+        width: 100%;
+        text-align: left;
+        padding: 37px 0 0 85px;
+    }
+    .timeline-arrow{
+        text-align: left;
+        left: 32px;
+    }
+}
+
+/* Section Star */
+/* ☆★ */
+.star-rating{
+    position: relative;
+    font-size: 3em;
+    color: gold;
+    display: inline-block;
+}
+.star-current{
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
