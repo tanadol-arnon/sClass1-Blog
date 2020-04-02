@@ -228,7 +228,10 @@ li.inverted > .timeline-card{
     }
     .timeline-arrow{
         text-align: left;
-        left: 32px;
+        left: 0;
+    }
+    .timeline-arrow > i{
+        margin-left: 32px;
     }
 }
 
