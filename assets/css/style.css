@@ -83,6 +83,10 @@ html, body {
 .warpper-card-img img:hover {
     transform: scale(1.2);
 }
+.btn-group-custom button{
+    width: 100px;
+    margin-bottom: 0.5rem;
+}
 
 /* Section Footer */
 .semi-footer {
