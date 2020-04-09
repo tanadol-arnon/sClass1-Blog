@@ -7,9 +7,11 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>About</title>
+    <title>Contact</title>
 </head>
 <body>
     <!-- Section Navbar -->
@@ -29,13 +31,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
@@ -45,113 +47,78 @@
     </nav>
 
     <!-- Section Header -->  
-    <header class="page-title jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="display-4 font-weight-bold">ABOUT ME</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique suscipit cumque voluptate distinctio fugiat, non libero! Totam, laudantium quo. Eligendi pariatur saepe eos nisi minima illum reiciendis beatae incidunt dolorem!</p>
-                </div>
-            </div>
+    <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+        <div class="blog-image">
+            <h1 class="display-4 font-weight-bold">ข้อมูลการติดต่อเรา</h1>
+            <p class="lead">AppzStory Studio</p>
         </div>
     </header>
 
-    <!-- Section ToDo -->
+    <!-- Section Blog -->
     <section class="container py-5">
-        <div class="row">
-            <div class="col-lg-6 py-3 p-lg-0">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IkAZi90My1o" frameborder="0" allowfullscreen></iframe>
-                  </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="border-short-bottom">รายละเอียด</h2>
             </div>
-            <div class="col-lg-6">
-                <h2>ทำความรู้จักกับเราให้ดียิ่งขึ้น</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus doloremque provident sed nulla, voluptatum reprehenderit iste culpa perferendis maiores a nesciunt facilis quas ducimus autem sunt, ad laudantium corporis facere!</p>
-                <br>
-                <h3>เราคาดหวังว่า</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolor sed perferendis vel quis quasi, aperiam, esse tempore fuga porro praesentium quae? Sunt, distinctio? Et eum quam voluptatem est neque!</p>
+            <div class="col-sm-4 mb-2">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fa fa-address-card py-2 fa-4x text-info"></i>
+                        <h4 class="card-title">ที่อยู่</h4>
+                        <p class="card-text">เชียงใหม่</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-2">
+                <div class="card h-100">
+                    <div class="card-body"> 
+                        <i class="fa fa-phone-square py-2 fa-4x text-info"></i>
+                        <h4 class="card-title">เบอร์โทรศัพท์</h4>
+                        <p class="card-text">(+66)12-345-6789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-2">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fa fa-envelope py-2 fa-4x text-info"></i>
+                        <h4 class="card-title">อีเมลล์</h4>
+                        <p class="card-text">exampmle@email.com</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Section Timeline -->
-    <section class="position-relative py-5 jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="assets/image/logo.png" class="img-fluid" width="150" alt="Logo">
-                    <h1 class="display-4 font-weight-bold text-white">Timeline About Us</h1>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-4 form-group">
+                                    <label for="name">ชื่อ</label>
+                                    <input type="text" id="name" class="form-group form-control" placeholder="ชื่อของคุณ">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label for="phone">เบอร์โทรศัพท์</label>
+                                    <input type="text" id="phone" class="form-group form-control" placeholder="เบอร์โทรศัพท์ของคุณ">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label for="email">อีเมลล์</label>
+                                    <input type="text" id="email" class="form-group form-control" placeholder="example@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">ข้อความของคุณ</label>
+                                <textarea id="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary d-block mx-auto">ส่งข้อความ</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="container py-5">
-        <div class="row">
-            <div class="col-12">
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li class="inverted">
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li class="inverted">
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li class="inverted">
-                        <div class="timeline-badge">
-                            <p>16 May 1999</p>
-                        </div>
-                        <div class="timeline-card">
-                            <h5>วันเกิดของฉัน</h5>
-                            <p>เกิดวันที่ 16 พฤษภาคม 1999</p>
-                        </div>
-                    </li>
-                    <li class="timeline-arrow">
-                        <i class="fa fa-chevron-down"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Section About -->
     <section class="position-relative py-5 jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
         <div class="container">
@@ -237,6 +204,8 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
 
