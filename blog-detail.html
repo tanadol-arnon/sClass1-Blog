@@ -48,7 +48,7 @@
 
     <!-- Section Header -->  
     <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1498569026542-39c64353e401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-        <div class="blog-image">
+        <div class="page-image">
             <h1 class="display-4 font-weight-bold">LOREM IPSUM</h1>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique suscipit cumque voluptate distinctio fugiat, non libero! Totam, laudantium quo. Eligendi pariatur saepe eos nisi minima illum reiciendis beatae incidunt dolorem!</p>
         </div>
@@ -246,6 +246,10 @@
         All Right Reserved
     </footer>
 
+    <div class="to-top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
     <!-- JS link -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -255,6 +259,26 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                nav: false,
+                dots: true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                    },
+                    1000:{
+                        items:3,
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -48,7 +48,7 @@
 
     <!-- Section Header -->  
     <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-        <div class="blog-image">
+        <div class="page-image">
             <h1 class="display-4 font-weight-bold">ข้อมูลการติดต่อเรา</h1>
             <p class="lead">AppzStory Studio</p>
         </div>
@@ -111,6 +111,9 @@
                             <div class="form-group">
                                 <label for="message">ข้อความของคุณ</label>
                                 <textarea id="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                            </div>
+                            <div id="recaptcha-wrapper" class="text-center my-2">
+                                <div class="g-recaptcha d-inline-block" data-sitekey="6LdBAOkUAAAAAEaErm4Snp-i62_OKnNxevhkDZgf"></div>
                             </div>
                             <button type="submit" class="btn btn-primary d-block mx-auto">ส่งข้อความ</button>
                         </form>
@@ -199,15 +202,49 @@
         All Right Reserved
     </footer>
 
+    <div class="to-top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
     <!-- JS link -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+    $(function(){
+        // global variables
+        captchaResized = false;
+        captchaWidth = 304;
+        captchaHeight = 78;
+        captchaWrapper = $('#recaptcha-wrapper');
+        captchaElements = $('#rc-imageselect, .g-recaptcha');
 
+        $(window).on('resize', function() {
+            resizeCaptcha();
+        });
+
+        resizeCaptcha();
+    });
+
+    function resizeCaptcha() {
+        if (captchaWrapper.width() >= captchaWidth) {
+            if (captchaResized) {
+                captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform', '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin', '').css('-o-transform-origin', '');
+                captchaWrapper.height(captchaHeight);
+                captchaResized = false;
+            }
+        } else {
+            var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
+            captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform', 'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform', 'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0').css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
+            captchaWrapper.height(captchaHeight * scale);
+            if (captchaResized == false) captchaResized = true;
+        }
+    }
+    </script>
 </body>
 </html>
