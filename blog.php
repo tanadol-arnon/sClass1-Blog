@@ -45,36 +45,7 @@
 </head>
 <body>
     <!-- Section Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-alpha">
-        <div class="container">
-
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
-                AppzStory Studio
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey" aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
     <!-- Section Header -->  
     <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
@@ -89,7 +60,7 @@
         <div class="row pb-4">
             <div class="col-12 text-center">
                 <div class="btn-group-custom">
-                    <a href="blog.html?tag=all">
+                    <a href="blog.php?tag=all">
                         <button class="btn btn-primary">ทั้งหมด</button>
                     </a>
                     <button class="btn btn-primary">HTML</button>
@@ -103,7 +74,7 @@
         <div class="row">
             <section class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card h-100">
-                    <a href="blog-detail.html?id=001" class="warpper-card-img">
+                    <a href="blog-detail.php?id=001" class="warpper-card-img">
                         <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
                     </a>
                     <div class="card-body">
@@ -111,7 +82,7 @@
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                     <div class="p-3">
-                        <a href="blog-detail.html?id=001" class="btn btn-primary btn-block">Read More</a>
+                        <a href="blog-detail.php?id=001" class="btn btn-primary btn-block">Read More</a>
                     </div>
                 </div>
             </section>

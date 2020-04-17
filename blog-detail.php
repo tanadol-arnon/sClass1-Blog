@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
+    <title>Blog Detail</title>
     <!-- COMMON TAGS -->
     <meta charset="utf-8">
     <!-- Search Engine -->
@@ -47,113 +47,128 @@
 </head>
 <body>
     <!-- Section Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-alpha">
-        <div class="container">
-
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
-                AppzStory Studio
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey" aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
     <!-- Section Header -->  
-    <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+    <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1498569026542-39c64353e401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
         <div class="page-image">
-            <h1 class="display-4 font-weight-bold">ข้อมูลการติดต่อเรา</h1>
-            <p class="lead">AppzStory Studio</p>
+            <h1 class="display-4 font-weight-bold">LOREM IPSUM</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique suscipit cumque voluptate distinctio fugiat, non libero! Totam, laudantium quo. Eligendi pariatur saepe eos nisi minima illum reiciendis beatae incidunt dolorem!</p>
         </div>
     </header>
 
     <!-- Section Blog -->
-    <section class="container py-5">
-        <div class="row text-center">
-            <div class="col-12">
-                <h2 class="border-short-bottom">รายละเอียด</h2>
-            </div>
-            <div class="col-sm-4 mb-2">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <i class="fa fa-address-card py-2 fa-4x text-info"></i>
-                        <h4 class="card-title">ที่อยู่</h4>
-                        <p class="card-text">เชียงใหม่</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 mb-2">
-                <div class="card h-100">
-                    <div class="card-body"> 
-                        <i class="fa fa-phone-square py-2 fa-4x text-info"></i>
-                        <h4 class="card-title">เบอร์โทรศัพท์</h4>
-                        <p class="card-text">(+66)12-345-6789</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 mb-2">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <i class="fa fa-envelope py-2 fa-4x text-info"></i>
-                        <h4 class="card-title">อีเมลล์</h4>
-                        <p class="card-text">exampmle@email.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="container blog-content">
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
-                        <form>
-                            <div class="form-row">
-                                <div class="col-md-4 form-group">
-                                    <label for="name">ชื่อ</label>
-                                    <input type="text" id="name" class="form-group form-control" placeholder="ชื่อของคุณ">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <label for="phone">เบอร์โทรศัพท์</label>
-                                    <input type="text" id="phone" class="form-group form-control" placeholder="เบอร์โทรศัพท์ของคุณ">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <label for="email">อีเมลล์</label>
-                                    <input type="text" id="email" class="form-group form-control" placeholder="example@email.com">
-                                </div>
+                <h2>LOREM</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque adipisci odit iusto, commodi sed eius deserunt, rerum animi natus iste impedit! Placeat neque vero explicabo consequatur sequi ipsum a quasi.</p>
+                
+                <h2>LOREM</h2>
+                <ol>
+                    <li>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </li>
+                    <li>
+                        Error voluptatem aspernatur exercitationem saepe aliquid numquam sed optio quas vel sit ab ducimus placeat ad, fugit dicta ea! Fuga, totam repellendus.
+                    </li>
+                </ol>
+
+                <h2>LOREM</h2>
+                <ol>
+                    <li>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </li>
+                    <li>
+                        Error voluptatem aspernatur exercitationem saepe aliquid numquam sed optio quas vel sit ab ducimus placeat ad, fugit dicta ea! Fuga, totam repellendus.
+                    </li>
+                </ol>
+            </div>
+            <div class="col-12">
+                <hr>
+                <p class="text-right text-muted">8 เมษายน 2020</p>
+            </div>
+            <div class="col-12">
+                <div class="owl-carousel owl-theme">
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="#" class="warpper-card-img">
+                                <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="message">ข้อความของคุณ</label>
-                                <textarea id="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                            <div class="p-3">
+                                <a href="#" class="btn btn-primary btn-block">Read More</a>
                             </div>
-                            <div id="recaptcha-wrapper" class="text-center my-2">
-                                <div class="g-recaptcha d-inline-block" data-sitekey="6LdBAOkUAAAAAEaErm4Snp-i62_OKnNxevhkDZgf"></div>
+                        </div>
+                    </section>
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="#" class="warpper-card-img">
+                                <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <button type="submit" class="btn btn-primary d-block mx-auto">ส่งข้อความ</button>
-                        </form>
-                    </div>
-                </div>
+                            <div class="p-3">
+                                <a href="#" class="btn btn-primary btn-block">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="#" class="warpper-card-img">
+                                <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" class="btn btn-primary btn-block">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="#" class="warpper-card-img">
+                                <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" class="btn btn-primary btn-block">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="#" class="warpper-card-img">
+                                <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" class="btn btn-primary btn-block">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                  </div>
+            </div>
+            <div class="col-12">
+                <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#helloworld" data-width="100%" data-numposts="5"></div>
+                <div id="fb-root"></div>
             </div>
         </div>
     </section>
+
     <!-- Section About -->
     <section class="position-relative py-5 jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
         <div class="container">
@@ -244,39 +259,29 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
     <script>
-    $(function(){
-        // global variables
-        captchaResized = false;
-        captchaWidth = 304;
-        captchaHeight = 78;
-        captchaWrapper = $('#recaptcha-wrapper');
-        captchaElements = $('#rc-imageselect, .g-recaptcha');
-
-        $(window).on('resize', function() {
-            resizeCaptcha();
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                nav: false,
+                dots: true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                    },
+                    1000:{
+                        items:3,
+                    }
+                }
+            });
         });
-
-        resizeCaptcha();
-    });
-
-    function resizeCaptcha() {
-        if (captchaWrapper.width() >= captchaWidth) {
-            if (captchaResized) {
-                captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform', '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin', '').css('-o-transform-origin', '');
-                captchaWrapper.height(captchaHeight);
-                captchaResized = false;
-            }
-        } else {
-            var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
-            captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform', 'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform', 'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0').css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
-            captchaWrapper.height(captchaHeight * scale);
-            if (captchaResized == false) captchaResized = true;
-        }
-    }
     </script>
 </body>
 </html>
