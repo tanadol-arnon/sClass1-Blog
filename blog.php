@@ -1,3 +1,12 @@
+<?php
+    require_once('php/connect.php');
+
+    $sql = "SELECT * FROM articles";
+    $result = $conn->query($sql) or die($conn->error);
+
+    // print_r($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,174 +81,28 @@
             </div>
         </div>
         <div class="row">
+            <?php while($row = $result->fetch_assoc()) { ?>
             <section class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card h-100">
-                    <a href="blog-detail.php?id=001" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img1.jpg" alt="Coding1">
+                    <a href="blog-detail.php?id=<?php echo $row['id'] ?>" class="warpper-card-img">
+                        <img class="card-img-top" src="<?php echo $row['image'] ?>" alt="Coding1">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">LOREM IPSUM</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, voluptas suscipit. Fuga corporis ab harum accusantium reiciendis quo optio, saepe eius ea quae explicabo? Eum aliquam ex asperiores alias iusto. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title"><?php echo $row['subject'] ?></h5>
+                        <p class="card-text"><?php echo $row['sub_title'] ?></p>
                     </div>
                     <div class="p-3">
-                        <a href="blog-detail.php?id=001" class="btn btn-primary btn-block">Read More</a>
+                        <a href="blog-detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-block">Read More</a>
                     </div>
                 </div>
             </section>
-            <section class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img2.jpg" alt="Coding2">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img3.jpg" alt="Coding3">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img4.jpg" alt="Cdoing4">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img5.jpg" alt="Coding5">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img class="card-img-top" src="assets/images/blog/img6.jpg" alt="Cdoing6">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
-                    </div>
-                </div>
-            </section>
-
+            <?php } ?>
         </div>
 
-    </section>
-
-    <!-- Section About -->
-    <section class="position-relative py-5 jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="assets/images/logo.png" class="img-fluid" width="150" alt="Logo">
-                    <h2 class="display-4 font-weight-bold text-white">AppzStory Studio</h2>
-                    <div class="star-rating">
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <div class="star-current" style="width: 81%;">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Section Footer -->
-    <footer class="semi-footer p-5 text-center text-md-left">
-        <div class="row">
-            <div class="col-md-4">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
-                    AppzStory Studio
-                </a>
-                <p>
-                    <i class="fa fa-phone-square"></i> : 099-999-9999 <br>
-                    <i class="fa fa-envelope"></i> : email@example.com <br>
-                    <i class="fa fa-address-card"></i> : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed nihil et soluta est dolorem.
-                </p>
-                <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                    <i class="fa fa-facebook-square fa-2x"></i>
-                </a>
-                <a href="https://www.youtube.com/appzstorystudio" target="_blank">
-                    <i class="fa fa-youtube fa-2x"></i>
-                </a>  
-            </div>
-            <div class="col-md-3">
-                <h4>Menu</h4>
-                <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-            </div>
-            <div class="col-md-5">
-                <h4>Map</h4>
-                <div id="map"></div>
-            </div>
-        </div>
-    </footer>
-    
-    <footer class="footer">
-        <span>
-            COPYRIGHT © 2019 
-            <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                AppzStory Studio
-            </a>
-        </span>
-        All Right Reserved
-    </footer>
+    <?php include_once('includes/footer.php') ?>
 
     <div class="to-top">
         <i class="fa fa-angle-up"></i>

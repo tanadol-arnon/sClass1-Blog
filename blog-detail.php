@@ -52,8 +52,8 @@
     <!-- Section Header -->  
     <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1498569026542-39c64353e401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
         <div class="page-image">
-            <h1 class="display-4 font-weight-bold">LOREM IPSUM</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique suscipit cumque voluptate distinctio fugiat, non libero! Totam, laudantium quo. Eligendi pariatur saepe eos nisi minima illum reiciendis beatae incidunt dolorem!</p>
+            <h1 class="display-4 font-weight-bold">HTML คืออะไร</h1>
+            <p class="lead">ภาษาหลักที่ใช้ในการเขียนเว็บเพจ โดยใช้ tag ในการกำหนดการแสดงผล</p>
         </div>
     </header>
 
@@ -61,27 +61,26 @@
     <section class="container blog-content">
         <div class="row">
             <div class="col-12">
-                <h2>LOREM</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque adipisci odit iusto, commodi sed eius deserunt, rerum animi natus iste impedit! Placeat neque vero explicabo consequatur sequi ipsum a quasi.</p>
-                
-                <h2>LOREM</h2>
+                <h2><strong>HTML คืออะไร</strong></h2>
+                <p><strong>HTML5</strong>&nbsp;คือ ภาษามาร์กอัป ที่ใช้สำหรับเขียน website &nbsp;ซึ่ง&nbsp;HTML5&nbsp;นี้เป็นภาษาที่ถูกพัฒนาต่อมาจากภาษา HTML และพัฒนาขึ้นมาโดย WHATWG (The Web Hypertext Application Technology Working Group) โดยได้มีการปรับเพิ่ม Feature หลายๆอย่างเข้ามาเพื่อให้ผู้พัฒนาสามารถใช้งานได้ง่ายมากยิ่งขึ้น</p>
+                <h2>ข้อดีของ HTML5</h2>
                 <ol>
-                    <li>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </li>
-                    <li>
-                        Error voluptatem aspernatur exercitationem saepe aliquid numquam sed optio quas vel sit ab ducimus placeat ad, fugit dicta ea! Fuga, totam repellendus.
-                    </li>
+                    <li>เว็บไซต์ที่สร้างจากภาษา&nbsp;<strong>HTML5&nbsp;</strong>สามารถแสดงผลได้กับทุก web browser&nbsp;</li>
+                    <li><strong>HTML5&nbsp;</strong>จะช่วยลดการใช้พวกปลั๊กอินพิเศษอย่างพวก Adobe Flash, Microsoft Silverlight, Apache Pivot สนับสนุน วิดีโอ และ องค์ประกอบเสียง รวมทั้ง สื่อมัลติมีเดียต่างๆมากขึ้น โดยไม่ต้องใช้ Flash</li>
+                    <li>มีการจัดการข้อผิดพลาดที่ดีขึ้น</li>
+                    <li>สคริปต์ใหม่ ที่จะมาแทนที่สคริปต์เดิม (เขียนโค้ดสั้นลง)</li>
+                    <li><strong>HTML5&nbsp;</strong>มีความเป็นอิสระสูง (คล้ายๆ XML )</li>
+                    <li><strong>HTML5&nbsp;</strong>ทำงานควบคู่กับ CSS3 ได้ดี ช่วยให้สามารถเพิ่มลูกเล่นต่างๆบนเว็บไซต์ได้สวยงามมากยิ่งขึ้น (CSS คือส่วนแสดงผล ที่นักออกแบบสามารถกำหนดสีสัน ตำแหน่ง ลักษณะเวลานำเมาส์ไปแหย่แล้วมีกระต่ายโผล่ออกมาจากโพรง หรือจับก้อนวัตถุในหน้าเว็บฯ ให้ชิดซ้ายชิดขวา ส่วน CSS3 คือเวอร์ชั่นที่ 3 ของ CSS )</li>
                 </ol>
-
-                <h2>LOREM</h2>
+                <h2>Features ใหม่ๆ ของ HTML5</h2>
                 <ol>
-                    <li>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </li>
-                    <li>
-                        Error voluptatem aspernatur exercitationem saepe aliquid numquam sed optio quas vel sit ab ducimus placeat ad, fugit dicta ea! Fuga, totam repellendus.
-                    </li>
+                    <li>Semantic Markup : การเพิ่ม Element ที่ อ่านง่ายมากขึ้น และช่วยให้ เราทำ SEO ได้มีประสิทธิภาพมากยิ่งขึ้น</li>
+                    <li>Form Enhancements : เพิ่มความสามารถของ Form ต่างๆ ไม่ว่าจะเป็น Input type, Attribute หรือ แม้แต่ Element</li>
+                    <li>Audio / Video: รองรับการอ่านไฟล์เสียง และ วีดีโอ โดยไม่จำเป็นต้องใช้ Embed Code ของ Third Party</li>
+                    <li>Canvas : ใช้ในการวาดรูป โดยจำเป็นต้องใช้ Javascriptช่วย</li>
+                    <li>ContentEditable : สามารถแก้ไข Content ได้โดยตรงผ่านทางหน้าเว็บ</li>
+                    <li>Drag and Drop : ลากวางObject ได้ เพื่อเพิ่มการ ตอบสนองระหว่างระบบกับผู้ใช้</li>
+                    <li>Persistent Data Storage : มีการจัดการที่ดีขึ้น โดยเก็บข้อมูลลงบนเครื่องของผู้ใช้</li>
                 </ol>
             </div>
             <div class="col-12">
@@ -169,85 +168,8 @@
         </div>
     </section>
 
-    <!-- Section About -->
-    <section class="position-relative py-5 jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="assets/images/logo.png" class="img-fluid" width="150" alt="Logo">
-                    <h2 class="display-4 font-weight-bold text-white">AppzStory Studio</h2>
-                    <div class="star-rating">
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <div class="star-current" style="width: 81%;">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Section Footer -->
-    <footer class="semi-footer p-5 text-center text-md-left">
-        <div class="row">
-            <div class="col-md-4">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
-                    AppzStory Studio
-                </a>
-                <p>
-                    <i class="fa fa-phone-square"></i> : 099-999-9999 <br>
-                    <i class="fa fa-envelope"></i> : email@example.com <br>
-                    <i class="fa fa-address-card"></i> : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed nihil et soluta est dolorem.
-                </p>
-                <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                    <i class="fa fa-facebook-square fa-2x"></i>
-                </a>
-                <a href="https://www.youtube.com/appzstorystudio" target="_blank">
-                    <i class="fa fa-youtube fa-2x"></i>
-                </a>  
-            </div>
-            <div class="col-md-3">
-                <h4>Menu</h4>
-                <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-            </div>
-            <div class="col-md-5">
-                <h4>Map</h4>
-                <div id="map"></div>
-            </div>
-        </div>
-    </footer>
-    
-    <footer class="footer">
-        <span>
-            COPYRIGHT © 2019 
-            <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                AppzStory Studio
-            </a>
-        </span>
-        All Right Reserved
-    </footer>
+    <?php include_once('includes/footer.php') ?>
 
     <div class="to-top">
         <i class="fa fa-angle-up"></i>

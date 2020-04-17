@@ -194,58 +194,7 @@
     </section>
 
     <!-- Section Footer -->
-    <footer class="semi-footer mt-5 p-5 text-center text-md-left">
-        <div class="row">
-            <div class="col-md-4">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
-                    AppzStory Studio
-                </a>
-                <p>
-                    <i class="fa fa-phone-square"></i> : 099-999-9999 <br>
-                    <i class="fa fa-envelope"></i> : email@example.com <br>
-                    <i class="fa fa-address-card"></i> : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed nihil et soluta est dolorem.
-                </p>
-                <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                    <i class="fa fa-facebook-square fa-2x"></i>
-                </a>
-                <a href="https://www.youtube.com/appzstorystudio" target="_blank">
-                    <i class="fa fa-youtube fa-2x"></i>
-                </a>  
-            </div>
-            <div class="col-md-3">
-                <h4>Menu</h4>
-                <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-            </div>
-            <div class="col-md-5">
-                <h4>Map</h4>
-                <div id="map"></div>
-            </div>
-        </div>
-    </footer>
-   
-    <footer class="footer">
-        <span>
-            COPYRIGHT © 2019 
-            <a href="https://www.facebook.com/WebAppzStory" target="_blank">
-                AppzStory Studio
-            </a>
-        </span>
-        All Right Reserved
-    </footer>
+    <?php include_once('includes/footer.php') ?>
 
     <!-- Section On to Top -->
     <div class="to-top">
@@ -256,6 +205,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jarallax/dist/jarallax.min.js"></script>  
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
 
