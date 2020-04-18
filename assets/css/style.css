@@ -87,6 +87,9 @@ html, body {
     width: 100px;
     margin-bottom: 0.5rem;
 }
+.btn-group-custom a:hover{
+    text-decoration: none;
+}
 
 .blog-content{
     padding: 50px 100px;

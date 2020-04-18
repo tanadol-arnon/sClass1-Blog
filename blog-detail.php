@@ -1,7 +1,7 @@
 <?php
     require_once('php/connect.php');
     
-    $sql = "SELECT * FROM articles WHERE id = '".$_GET['id']."' ";
+    $sql = "SELECT * FROM articles WHERE id = '".$_GET['id']."' AND status = true";
     $result = $conn->query($sql) or die($conn->error);
 
     if($result->num_rows > 0){
@@ -10,7 +10,6 @@
         header('location: blog.php');
     }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +63,7 @@
     <?php include_once('includes/navbar.php') ?>
 
     <!-- Section Header -->  
-    <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url(<?php echo $row['image'] ?>);">
+    <header class="jarallax" data-jarallax='{ "speed"; 0.6 }' style="background-image: url(<?php echo $base_path_blog.$row['image'] ?>);">
         <div class="page-image">
             <h1 class="display-4 font-weight-bold"><?php echo $row['subject'] ?></h1>
             <p class="lead"><?php echo $row['sub_title'] ?></p>

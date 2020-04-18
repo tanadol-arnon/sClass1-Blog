@@ -6,4 +6,5 @@
         echo 'connection error : '.$conn->connect_error;
         exit();
     }
+    $base_path_blog = 'assets/images/blog/';
 ?>
