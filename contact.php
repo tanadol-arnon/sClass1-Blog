@@ -96,29 +96,29 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
-                        <form>
+                        <form method="post" action="php/contact.php">
                             <div class="form-row">
                                 <div class="col-md-4 form-group">
                                     <label for="name">ชื่อ</label>
-                                    <input type="text" id="name" class="form-group form-control" placeholder="ชื่อของคุณ">
+                                    <input type="text" id="name" name="name" class="form-group form-control" placeholder="ชื่อของคุณ" required>
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label for="phone">เบอร์โทรศัพท์</label>
-                                    <input type="text" id="phone" class="form-group form-control" placeholder="เบอร์โทรศัพท์ของคุณ">
+                                    <input type="number" id="phone" name="phone" class="form-group form-control" placeholder="เบอร์โทรศัพท์ของคุณ" required>
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label for="email">อีเมลล์</label>
-                                    <input type="text" id="email" class="form-group form-control" placeholder="example@email.com">
+                                    <input type="email" id="email" name="email" class="form-group form-control" placeholder="example@email.com" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="message">ข้อความของคุณ</label>
-                                <textarea id="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                                <textarea id="message" name="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่" required></textarea>
                             </div>
                             <div id="recaptcha-wrapper" class="text-center my-2">
-                                <div class="g-recaptcha d-inline-block" data-sitekey="6LdBAOkUAAAAAEaErm4Snp-i62_OKnNxevhkDZgf"></div>
+                                <div class="g-recaptcha d-inline-block" data-callback="recaptchaCallback" data-sitekey="6LdBAOkUAAAAAEaErm4Snp-i62_OKnNxevhkDZgf"></div>
                             </div>
-                            <button type="submit" class="btn btn-primary d-block mx-auto">ส่งข้อความ</button>
+                            <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary d-block mx-auto" disabled>ส่งข้อความ</button>
                         </form>
                     </div>
                 </div>
@@ -143,35 +143,38 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgU18_tVZdK-nJ0iDuutPnbUsTYwE_XA&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
     <script>
-    $(function(){
-        // global variables
-        captchaResized = false;
-        captchaWidth = 304;
-        captchaHeight = 78;
-        captchaWrapper = $('#recaptcha-wrapper');
-        captchaElements = $('#rc-imageselect, .g-recaptcha');
+        $(function(){
+            // global variables
+            captchaResized = false;
+            captchaWidth = 304;
+            captchaHeight = 78;
+            captchaWrapper = $('#recaptcha-wrapper');
+            captchaElements = $('#rc-imageselect, .g-recaptcha');
 
-        $(window).on('resize', function() {
+            $(window).on('resize', function() {
+                resizeCaptcha();
+            });
+
             resizeCaptcha();
         });
 
-        resizeCaptcha();
-    });
-
-    function resizeCaptcha() {
-        if (captchaWrapper.width() >= captchaWidth) {
-            if (captchaResized) {
-                captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform', '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin', '').css('-o-transform-origin', '');
-                captchaWrapper.height(captchaHeight);
-                captchaResized = false;
+        function resizeCaptcha() {
+            if (captchaWrapper.width() >= captchaWidth) {
+                if (captchaResized) {
+                    captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform', '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin', '').css('-o-transform-origin', '');
+                    captchaWrapper.height(captchaHeight);
+                    captchaResized = false;
+                }
+            } else {
+                var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
+                captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform', 'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform', 'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0').css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
+                captchaWrapper.height(captchaHeight * scale);
+                if (captchaResized == false) captchaResized = true;
             }
-        } else {
-            var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
-            captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform', 'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform', 'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0').css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
-            captchaWrapper.height(captchaHeight * scale);
-            if (captchaResized == false) captchaResized = true;
         }
-    }
+        function recaptchaCallback () {
+            $('#btn_submit').removeAttr('disabled')
+        }
     </script>
 </body>
 </html>
