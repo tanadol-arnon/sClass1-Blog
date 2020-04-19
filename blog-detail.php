@@ -9,6 +9,9 @@
     } else {
         header('location: blog.php');
     }
+
+    $sql_RAND = "SELECT * FROM articles WHERE status = true ORDER BY RAND() LIMIT 6";
+    $result_RAND = $conn->query($sql_RAND) or die($conn->error);
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +82,27 @@
             <div class="col-12">
                 <hr>
                 <p class="text-right text-muted"><?php echo date_format(new DateTime($row['update_at']),"j F Y") ?></p>
+            </div>
+            <div class="col-12">
+                <div class="owl-carousel owl-theme">
+                    <?php while($row_RAND = $result_RAND->fetch_assoc()) { ?>
+                    <section class="col-12 p-2">
+                        <div class="card h-100">
+                            <a href="blog-detail.php?id=<?php echo $row_RAND['id'] ?>" class="warpper-card-img">
+                                <img class="card-img-top" src="<?php echo $base_path_blog.$row_RAND['image'] ?>" alt="Coding1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row_RAND['subject'] ?></h5>
+                                <p class="card-text"><?php echo $row_RAND['sub_title'] ?></p>
+                            </div>
+                            <div class="p-3">
+                                <a href="blog-detail.php?id=<?php echo $row_RAND['id'] ?>" class="btn btn-primary btn-block">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                    <?php } ?>
+                    
+                </div>
             </div>
             <div class="col-12">
                 <div class="fb-comments" data-width="100%" data-href="https://localhost/blog/blog-detail.php?id_helloworld=<?php $row['id']; ?>" data-numposts="5"></div>
